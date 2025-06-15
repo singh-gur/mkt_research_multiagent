@@ -1,0 +1,23 @@
+[project]
+name = "mkt_research_multiagent"
+version = "0.1.0"
+description = "mkt_research_multiagent using crewAI"
+authors = [{ name = "Your Name", email = "you@example.com" }]
+requires-python = ">=3.10,<3.14"
+dependencies = [
+    "crewai[tools]>=0.130.0,<1.0.0"
+]
+
+[project.scripts]
+mkt_research_multiagent = "mkt_research_multiagent.main:run"
+run_crew = "mkt_research_multiagent.main:run"
+train = "mkt_research_multiagent.main:train"
+replay = "mkt_research_multiagent.main:replay"
+test = "mkt_research_multiagent.main:test"
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[tool.crewai]
+type = "crew"
